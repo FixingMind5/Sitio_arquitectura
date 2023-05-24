@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.container--title {
+    margin: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 55px;
+    padding-bottom: 20px;
+    border-bottom: solid 10px black;
+}
+
+.container--return {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.container--return:hover {
+    text-decoration: underline;
+}
+
+.container--create-account {
+    font-size: 15px;
+}
+
+.container--create-account__link {
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container--create-account__link:hover {
+    text-decoration: underline;
+}
+
+.form label {
+    display: flex;
+    flex-flow: column;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.form input {
+    border: none;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 0;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    width: 92%;
+}
+
+.form input[type="submit"] {
+    background-color: black;
+    width: 100%;
+}
+
+.container--button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.container--button:hover {
+    transition-timing-function: ease;
+    transition: 0.2s;
+    background-color: white;
+    color: black;
+}
+

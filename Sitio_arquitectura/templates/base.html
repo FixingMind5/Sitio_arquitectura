@@ -11,13 +11,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/header_style.css' %}">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" as="font"
     crossorigin="crossoringin">
 </head>
 {% endblock %}
 
+{% if request.user.username %}
+<header class="header">
+    <!-- restructurando el header -->
+    <a class="header--title" href="index.html">Espacio MÉXICO</a>
+    
+    <nav class="header--menu">
+        <a href="nosotros.html" class="header--link">Edificios</a>
+        <a href="cursos.html" class="header--link">Espacios urbanos</a>
+        <a href="contacto.html" class="header--link">Bibliografia</a>
+        <a href="" class="header--link">{{ request.user.username }}</a>
+        <a href="{% url 'logout' %}" class="header--link login">Cerrar sesión</a>
+    </nav>
+</header>
+{% else %}
 <header class="header">
     <!-- restructurando el header -->
     <a class="header--title" href="index.html">Espacio MÉXICO</a>
@@ -30,6 +44,7 @@
         <a href="{% url 'register' %}" class="header--link signin">Registrarse</a>
     </nav>
 </header>
+{% endif %}
 
 {% block content %}
 {% endblock %}

@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+
     <title>Registro de usuario</title>
 </head>
 <body>
-    <form action="POST" class="form">
-        {% csrf_token %}
-        {{ form.as_p }}
+    <div class="container">
+        <a class="container--return" href="{% url 'index' %}">Regresar a Inicio</a>
+        <h1 class="container--title">Registrarse</h1>
 
-        <button type="submit">¡Registrarme!</button>
-    </form>
+        <form method="POST" action="{% url 'register' %}" class="form">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input type="submit" class="container--button" placeholder="¡Registrarme!"/>
+            <p class="container--create-account">¿Ya tienes una cuenta? <a class="container--create-account__link" href="{% url 'login' %}">¡Inicia sesión aquí!</a></p>
+        </form>
+    </div>
 </body>
 </html>

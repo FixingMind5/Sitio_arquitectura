@@ -16,7 +16,7 @@ def register(request):
             form.save()
             username = form.cleaned_data['username']
             messages.success(request, f'usuario {username} registrado!')
-            return redirect(index)
+            return redirect('index')
     else:
         form = UserRegistrationForm()
 
