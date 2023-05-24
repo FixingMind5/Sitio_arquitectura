@@ -1,175 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Santuario</title>
+{% extends 'base.html' %}
 
-    <link rel="prefetch" href="nosotros.html" as="document">
+{% block head %}
+{{ block.super }}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock%}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="preload" href="css/normaliza.css" as="style">
-    <link rel="stylesheet" href="css/normaliza.css">
-
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" as="font"
-    crossorigin="crossoringin">
-
-
-
-</head>
+{% block content %}
 <body>
-    <header class="header">
-
-        <div class="contenedor">
-            <div class="barra">
-                <a class="logo" href="index.html">
-
-                    <h1 class="logo__nombre no-margin centrar-texto">Espacio MEXICO</h1>
-                </a>
-                
-                <nav class="navegacion">
-                    <!-- Estos van a ser links -->
-                    <a href="nosotros.html" class="navegacion__enlace">Edificios</a>
-                    <a href="cursos.html" class="navegacion__enlace">Espacios urbanos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Bibliografia</a>
-                </nav>
-
-            </div>
-
+    <div class="content">
+        <div class="landing">
+            <img 
+                src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80" 
+                alt="foto-landing"
+                class="landing--image"
+            >
+            <h2 class="landing--title"> Espacio Arquitectonico y urbano del siglo XIX</h2>
+            <p class="landing--intro">...“Espacio arquitectónico en México”  es el resultado de la colaboración de estudiantes de la carrera de Arquitectura  en la  Facultad de Estudios Superiores Acatlán ,UNAM,  que tiene como objetivo : el conocimiento, la  difusión  y revalorización del patrimonio arquitectónico  del siglo XIX  y principios del siglo XX desarrollado en la Ciudad de México.</p>
+            <p class="landing--sign">
+                Arq. Rosa Alejandra Guzmán Martínez<br>
+                Profesora de la Facultad de Estudios Superiores Acatlán. UNAM<br>
+                Arquitectura<br>
+            </p>
         </div>
-
-        <div class="header__texto">
-            <h2 class="no-margin"> Espacio Arquitectonico y urbano del siglo XIX</h2>
-        </div>
-    </header>
-
-    <div class="contenedor contenidor-principal">
+    
         <main class="blog">
-            <h3>Edificios Principales</h3>
+            <h3 class="blog__title">Edificios Principales</h3>
 
             <article class="entrada">
-                <!-- <div class="entrada__imagen">
-                    <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
-                </div> -->
-
-                <div class="entrada__contenido">
-                    <h4 class="no-margin">Fabricas Universales</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                <img 
+                    src="https://espacioarquitectonicoenmexico.files.wordpress.com/2018/06/mineria-30.png" 
+                    alt="imagen blog"
+                    class="entrada__imagen"
+                >
+                <div class="entrada__info">
+                    <h3 class="entrada__nombre">Palacio de Minería</h4>
+                    <p class="entrada__contexto_historico">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                         Iste voluptas quos voluptatem earum expedita rerum velit id,
                         tenetur autem temporibus sunt, fuga sint a voluptates assumenda quisquam sequi, ducimus hic.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Repellat nostrum velit praesentium modi illum neque nulla sunt incidunt. 
-                        Impedit esse veniam eveniet cupiditate aperiam dolor dicta ab doloribus ullam maxime.</p>
-
-                        <a href="entrada.html" class="boton boton--primario">Más información</a>
+                        Impedit esse veniam eveniet cupiditate aperiam dolor dicta ab doloribus ullam maxime.
+                    </p>
                 </div>
+                    
 
+                <a href="entrada.html" class="entrada__boton boton boton--primario">Leer más</a>
             </article>
-
-
             <article class="entrada">
-                <!-- <div class="entrada__imagen">
-                    <img  loading="lazy" src="img/blog2.jpg" alt="imagen blog">
-                </div> -->
-
-                <div class="entrada__contenido">
-                    <h4 class="no-margin"><!-- name -->Palacio de Mineria</h4>
-                    <p> <!-- historical context -->Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Iste voluptas quos voluptatem earum expedita rerum velit id,
-                        tenetur autem temporibus sunt, fuga sint a voluptates assumenda quisquam sequi, ducimus hic.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat nostrum velit praesentium modi illum neque nulla sunt incidunt. 
-                        Impedit esse veniam eveniet cupiditate aperiam dolor dicta ab doloribus ullam maxime.</p>
-
-                        <!-- Link url="/buildings/palacio-de-mineria/"" -->
-                        <a href="entrada.html" class="boton boton--primario">Más información</a>
+                <img 
+                    src="https://espacioarquitectonicoenmexico.files.wordpress.com/2019/05/chopo-1.jpg?w=636&h=954" 
+                    alt="imagen blog"
+                    class="entrada__imagen"
+                >
+                <div class="entrada__info">
+                    <h3 class="entrada__nombre">Museo Universitario del Chopo</h4>
+                    <p class="entrada__contexto_historico">
+                        El pensamiento del arquitecto consistía que el diseño debía ser más allá del estudio de la teoría y mas enfocado a la aplicación del acero ya que esto involucraba la modernidad con la que se estaba viviendo con el descubrimiento del acero y el cristal.
+                    </p>
+                    
                 </div>
-                
+
+                <a href="entrada.html" class="entrada__boton boton--primario">Leer más</a>
             </article>
-
-
             <article class="entrada">
-                <!-- <div class="entrada__imagen">
-                    <img  loading="lazy" src="img/blog3.jpg" alt="imagen blog">
-                </div> -->
-
-                <div class="entrada__contenido">
-                    <h4 class="no-margin"><!-- name -->Palacio de hierro</h4>
-                    <p><!-- historical context -->Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Iste voluptas quos voluptatem earum expedita rerum velit id,
-                        tenetur autem temporibus sunt, fuga sint a voluptates assumenda quisquam sequi, ducimus hic.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat nostrum velit praesentium modi illum neque nulla sunt incidunt. 
-                        Impedit esse veniam eveniet cupiditate aperiam dolor dicta ab doloribus ullam maxime.</p>
-
-                        <!-- Link url="/buildings/palacio-de-hierro/"" -->
-                        <a href="entrada.html" class="boton boton--primario">Más información</a>
+                <img 
+                    src="https://espacioarquitectonicoenmexico.files.wordpress.com/2019/05/t.-juc3a1rez.jpg" 
+                    alt="imagen blog"
+                    class="entrada__imagen"
+                >
+                <div class="entrada__info">
+                    <h3 class="entrada__nombre">Teatro Juárez</h4>
+                    <p class="entrada__contexto_historico">
+                        Su actividad minera fue la que determino su trazo urbano, y el crecimiento de su población hasta convertirse en un asentamiento importante, lo cual fue consecuencia de la creación de un teatro que denotara que Guanajuato era un ciudad importante en el concepto novo hispano, la cual llevo a la fundación del «Teatro Principal» en 1788, usado por artistas nacionales y extranjeros que visitaran la ciudad minera.
+                    
                 </div>
-                
+                </p>
+
+                <a href="entrada.html" class="entrada__boton boton boton--primario">Leer más</a>
             </article>
+            <article class="entrada">
+                <img 
+                    src="https://espacioarquitectonicoenmexico.files.wordpress.com/2018/05/casa-boker.jpg?w=662&h=496" 
+                    alt="imagen blog"
+                    class="entrada__imagen"
+                >
+                <div class="entrada__info">
+                    <h3 class="entrada__nombre">Casa Boker</h4>
+                    <p class="entrada__contexto_historico">
+                        Desde el año 1614 la familia Boker fabricaba herramientas y las comercializaba en Remscheid Alemania. Enrique Boker fabricaba y vendía para Estados Unidos, Canadá, México, Sudamérica, Australia, Nueva Zelanda, Argentina y Chile.
+                    </p>
+                    
+                </div>
 
-
+                <a href="entrada.html" class="entrada__boton boton boton--primario">Leer más</a>
+            </article>
         </main>
+
         <aside class="sidebar">
-            <h3>Espacio urbano</h3>
-            <!-- urbanism -->
-            <ul class="cursos no-padding">
-                <li class="widget-curso">
-                    <h4 class="no-margin"><!-- name -->Paseo de reforma</h4>
-                    <p class="widget-curso__label"><!-- ubicacion --> Ubicado en:
-                        <span class="widget-curso__info">CDMX                        </span>
-                    </p>
-                    <p class="widget-curso__label"><!-- urban_space.biograbhy.name --> Autor:
-                        <span class="widget-curso__info"> Rosenzweig </span>
-                    </p>
-                    <!-- Link url /urbanism/paseo_de_la_reforma/ -->
-                    <a href="entrada.html" class="boton boton--secundario">Más información</a>
+            <h3
+                class="sidebar--subtitle"
+            >
+                Espacio urbano
+            </h3>
 
-
-                </li>
-
-                <li class="widget-curso">
-                    <h4 class="no-margin">Zócalo</h4>
-                    <p class="widget-curso__label">Dimensiones:
-                        <span class="widget-curso__info">46,800 m2</span>
-                    </p>
-                    <p class="widget-curso__label">Ubicación:
-                        <span class="widget-curso__info">CDMX</span>
-                    </p>
-                    <a href="entrada.html" class="boton boton--secundario">Más información</a>
-
-
-                </li>
+            <aside class="sidebar--image_container">
+                <img 
+                src="https://images.unsplash.com/photo-1496016943515-7d33598c11e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXJiYW5vfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" 
+                class="sidebar--image"
+                alt="">
+            </aside>
+            <ul class="UrbanSpace">
+                <a class="space" href="">
+                    <span class="space--id">1</span>
+                    <p class="space--name">Paseo de reforma</p>
+                    <p class="space--location">Ubicado en: CDMX</p>
+                    <p class="space--autor">Autor:Rosenzweig</p>
+                </a>
+                <a class="space" href="">
+                    <span class="space--id">2</span>
+                    <p class="space--name">Zócalo</p>
+                    <p class="space--location">Ubicado en: CDMX</p>
+                    <p class="space--autor"> -- </p>
+                </a>
+                <a class="space" href="">
+                    <span class="space--id">3</span>
+                    <p class="space--name">Colonia San Rafael</p>
+                    <p class="space--location">Ubicado en: CDMX</p>
+                    <p class="space--autor">Autor:Acosta Baltazar Josue</p>
+                </a>
             </ul>
 
         </aside>
     </div>
-
-    <footer class="footer">    
-        <div class="contenedor">
-            <div class="barra">
-                <a href="logo" href="index.html">
-
-                    <h1 class="logo__nombre no-margin centrar-texto">El Santuario</span></h1>
-                </a>
-                
-                <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                </nav>
-
-            </div>
-
-        </div>
-    </footer>
-    
+    {% endblock %}
 </body>
 </html>

@@ -1,0 +1,82 @@
+:root{
+    --funteHeading: 'Montserrat Alternates', sans-serif;
+    --funteParrafos: 'Montserrat', sans-serif;
+
+    --primario: #F07FCB;
+    --secundario: #F0D646;
+    --terciario: #67ECF0;
+    --blanco: rgb(175, 175, 175);
+    --gris: #6b6b6bdc;
+    --negro: #000;
+}
+
+/** Header **/
+
+.header {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 20px 50px;
+    border-bottom: solid 2px black;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.header--title {
+    font-size: 42px;
+    padding-left: 5%;
+    align-self: center;
+    font-weight: bold;
+    font-family: var(--funteHeading);
+}
+
+.header--title:hover {
+    transition: 0.2s;
+    transition-timing-function: ease;
+    background-color: var(--terciario);
+    color: var(--primario);
+}
+
+.header--menu {
+    display: flex;
+    align-items: center;
+    padding-right: 5%;
+    justify-content: space-evenly;
+    width: 36%;
+    /* padding: 20px; */
+    font-size: 20px;
+}
+
+.header--link:hover {
+    transition: 0.2s;
+    transition-timing-function: ease;
+    background-color: var(--terciario);
+    color: var(--primario);
+}
+
+.login {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.signin {
+    color: black;
+    border: solid 2px black;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.login:hover, .signin:hover {
+    transition: 0.2s;
+    transition-timing-function: ease;
+    background-color: black;
+    color: white;
+}

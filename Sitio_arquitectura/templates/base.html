@@ -1,0 +1,54 @@
+{% block head %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Santuario</title>
+
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/header_style.css' %}">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" as="font"
+    crossorigin="crossoringin">
+</head>
+{% endblock %}
+
+<header class="header">
+    <!-- restructurando el header -->
+    <a class="header--title" href="index.html">Espacio MÉXICO</a>
+    
+    <nav class="header--menu">
+        <a href="nosotros.html" class="header--link">Edificios</a>
+        <a href="cursos.html" class="header--link">Espacios urbanos</a>
+        <a href="contacto.html" class="header--link">Bibliografia</a>
+        <a href="login.html" class="header--link login">Iniciar Sesión</a>
+        <a href="signin.html" class="header--link signin">Registrarse</a>
+    </nav>
+</header>
+
+{% block content %}
+{% endblock %}
+
+<footer class="footer">    
+    <div class="contenedor">
+        <div class="barra">
+            <a href="logo" href="index.html">
+
+                <h1 class="logo__nombre no-margin centrar-texto">El Santuario</span></h1>
+            </a>
+            
+            <nav class="navegacion">
+                <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+
+        </div>
+
+    </div>
+</footer>
