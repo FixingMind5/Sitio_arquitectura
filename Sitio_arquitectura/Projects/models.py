@@ -1,5 +1,7 @@
 from django.db import models
 
+from Biographies.models import Biography
+
 TYPE_OF_URBAN_PLACES_CHOICES = [
     ("COL", "Colonias"), 
     ("PLAZAS Y PARQUES", "Plazas y Parques"),
@@ -39,6 +41,9 @@ class Project(models.Model):
     location = models.OneToOneField(
         Location,
         on_delete=models.CASCADE,
+    )
+    project_designer = models.ManyToManyField(
+        Biography
     )
 
 
